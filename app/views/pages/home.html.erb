@@ -1,0 +1,51 @@
+<!-- Navbar fixe tout en haut -->
+<div class="navbar">
+  <ul>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#map">Où nous trouver</a></li>
+    <li><a href="#gallery">Réalisations</a></li>
+  </ul>
+</div>
+
+<!-- Contenu principal avec padding-top pour compenser la navbar -->
+<div class="main-content">
+
+  <div class="section logo-section">
+    <div class="logo-container">
+      <%= image_tag("logo.png", alt: "MH Barber Shop Logo") %>
+    </div>
+  </div>
+
+  <div class="section horaires-section" id="horaires">
+    <h2>Horaires d’ouverture</h2>
+    <ul>
+      <li>Lundi : 09h30 – 18h00</li>
+      <li>Mardi : 09h30 – 18h00</li>
+      <li>Mercredi : 09h30 – 18h00</li>
+      <li>Jeudi : 09h30 – 18h00</li>
+      <li>Vendredi : 09h30 – 18h00</li>
+      <li>Samedi : 09h30 – 17h00</li>
+      <li>Dimanche : Fermé</li>
+    </ul>
+  </div>
+
+  <div class="section map-section" id="map">
+    <h2>Où nous trouver</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.191533243971!2d6.9012924!3d49.1897074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4795b53b13f1b63f%3A0x88abf50e2b7fd457!2sMH%20BarberShop!5e0!3m2!1sfr!2sfr!4v1687777777777"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section gallery-section" id="gallery">
+    <h2>Nos réalisations</h2>
+    <div class="gallery">
+      <% 5.times do |i| %>
+        <%= image_tag "#{i + 1}.jpg", alt: "Coupe #{i + 1}" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
